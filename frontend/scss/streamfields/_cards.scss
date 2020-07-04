@@ -1,0 +1,156 @@
+.large-card {
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(50%);
+    color: #FFF;
+    transition: all 0.3s;
+    transform-origin: left;
+    left: 20px;
+  }
+
+  h2 {
+    width: fit-content;
+    padding: 20px 40px;
+    background: $black;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 5px;
+      background: #FFF;
+      transform-origin: left;
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
+  .large-card-button {
+    .btn {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      transform: translateY(100%);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    .large-card__text {
+      transform: scale(1.175);
+      bottom: -40px;
+    }
+
+    h2 {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    .btn-default {
+      &:after {
+        right: -7px;
+      }
+    }
+  }
+
+
+}
+
+
+.small-card {
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(50%);
+    color: #FFF;
+    transition: all 0.3s;
+    transform-origin: left;
+    left: 20px;
+  }
+
+  h3 {
+    width: fit-content;
+    padding: 15px 20px;
+    background: $black;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 5px;
+      background: #FFF;
+      transform-origin: left;
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
+  .large-card-button {
+    .btn {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      transform: translateY(100%);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    .large-card__text {
+      transform: scale(1.175);
+      bottom: -40px;
+    }
+
+    h3 {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    .btn-default {
+      &:after {
+        right: -7px;
+      }
+    }
+  }
+
+
+}

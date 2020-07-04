@@ -1,0 +1,72 @@
+.btn {
+  color: #FFF;
+  font-family: $body-font;
+  border-radius: 50px;
+
+}
+
+.btn-primary {
+  background: $brand-color;
+  color: #FFF;
+
+  line-height: 46px;
+  padding: 0 40px;
+  border: none;
+  transition: all 0.3s;
+  font-weight: 300;
+  width: fit-content;
+
+
+  &:hover {
+    background: darken($brand-color, 10%);
+    transform: translateY(-6px);
+  }
+}
+
+.btn-default {
+  position: relative;
+
+  &:after {
+    content: '';
+    background: url("../img/arrow.svg") no-repeat;
+    width: 7px;
+    height: 13px;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    transform: translateY(12px);
+    padding-right: 10px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: #FFF;
+
+    &:after {
+      right: -7px;
+    }
+  }
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+}
+
+.btn.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 12;
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    fill: #FFF;
+    width: 25px;
+    height: 25px;
+  }
+}

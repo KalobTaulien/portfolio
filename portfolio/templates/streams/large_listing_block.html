@@ -1,0 +1,23 @@
+{% load wagtailimages_tags %}
+
+<section class="large-section large-listing-block">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <a class="large-card" href="{{ url }}">
+                    {% image self.image fill-800x475 as img %}
+                    <img src="{{ img.url }}" alt="{{ img.alt }}">
+                    <div class="large-card__text text-{{ self.text_alignment }}">
+                        <h2>{{ self.title }}</h2>
+                    </div>
+                    {% comment %}
+                    <div class="large-card-button">
+                        <span class="btn btn-default">View</span>
+                    </div>
+                    {% endcomment %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+

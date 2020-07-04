@@ -1,0 +1,19 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<div class="small-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% image self.image fill-800x550 as img %}
+                <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+            </div>
+            <div class="justify-content-center d-flex flex-column col-md-4 {% if self.text_alignment == 'left' %}order-first{% endif %}">
+                {{ self.content }}
+                {% if self.link.url %}
+                    <a href="{{ self.link.url }}" class="btn btn-primary">{{ self.link.link_text }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+

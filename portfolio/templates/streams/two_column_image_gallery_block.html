@@ -1,0 +1,22 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+<div class="small-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pb-3 pb-md-4">
+                    {% image self.small_image fill-400x240 as small_img_1 %}
+                    <img src="{{ small_img_1.url }}" alt="{{ small_img_1.alt }}" style='width: 100%; height: auto;'>
+                </div>
+                <div class="pt-3 pt-md-4">
+                    {% image self.small_image_2 fill-400x240 as small_img_2 %}
+                    <img src="{{ small_img_2.url }}" alt="{{ small_img_2.alt }}" style='width: 100%; height: auto;'>
+                </div>
+            </div>
+            <div class="col-md-6 {% if self.large_image_alignment == 'left' %} order-first{% endif %}">
+                {% image self.large_image fill-640x768 as large_image %}
+                <img src="{{ large_image.url }}" alt="{{ large_image.alt }}" style='width: 100%; height: auto;'>
+            </div>
+        </div>
+    </div>
+</div>
+

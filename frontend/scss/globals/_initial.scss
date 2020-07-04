@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: $black;
+  color: #FFF;
+  text-rendering: optimizeLegibility;
+  padding-top: 100px;
+}

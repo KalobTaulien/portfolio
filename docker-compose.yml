@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    container_name: portfolio_db
+    network_mode: "bridge"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  backend:
+    network_mode: "bridge"
+    container_name:  portfolio_backend
+    image:  portfolio_backend_image
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${WINDIR}.:/app
+    depends_on:
+      - db
+    links:
+      - db
+    stdin_open: true

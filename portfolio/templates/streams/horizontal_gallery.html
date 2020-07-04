@@ -1,0 +1,10 @@
+{% load wagtailimages_tags %}
+<div id="horizontalGallery" class="section-space-margin">
+    <div id="horizontalGallerySlide">
+        {% for image in self.images %}
+            <section class="panel">
+                {% image image.img fill-1800x1200 %}
+            </section>
+        {% endfor %}
+    </div>
+</div>

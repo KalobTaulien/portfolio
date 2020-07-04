@@ -1,0 +1,21 @@
+{% load wagtailimages_tags %}
+<div class="banner">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                {% image self.banner_image fill-475x600 as img %}
+                <div class="banner-image">
+                    {% if img %}
+                        <img class="imageEnter" src="{{ img.url }}" alt="{{ img.alt }}" data-scroll>
+                    {% endif %}
+                    <div class="banner-text">
+                        <h1 class="splitting">{{ self.banner_title|safe }}</h1>
+                        {% if self.banner_subtitle %}
+                        <p class="banner-subtitle fadeUpOpacity delay-500ms" data-scroll>{{ self.banner_subtitle|safe }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

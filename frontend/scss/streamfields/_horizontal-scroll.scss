@@ -1,0 +1,34 @@
+#horizontalGallery {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+
+#horizontalGallerySlide {
+  width: 300%; /* to contain 3 panels, each with 100% of window width */
+  height: 100%;
+}
+
+.panel {
+  height: 100%;
+  width: 33.3333%; /* relative to parent -> 25% of 400% = 100% of window width */
+  float: left;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+
+  @include media-breakpoint-up(sm) {
+    img {
+      position: relative;
+      height: auto;
+      object-fit: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.footer-cta {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 500px;
+  }
+}

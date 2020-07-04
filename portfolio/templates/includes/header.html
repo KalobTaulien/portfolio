@@ -1,0 +1,49 @@
+{% load menu_tags %}
+
+{% get_nav_items as header_links %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-scroll>
+
+    <a href="/" class="mr-auto d-lg-none navbar-brand">
+        <h5 class="mb-0 pl-md-4">{{ self.get_site.site_name }}</h5>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            {% for link in header_links %}
+                <li class="nav-item">
+                    <a class="nav-link{% if link.slug in request.path %} active {% endif %}" href="{{ link.url }}">
+                        {{ link.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+
+<div id="mobile-nav" style="display: none">
+<button class="btn close" aria-label="Close">
+    <svg>
+        <use href="#close"></use>
+    </svg>
+</button>
+    <div class=" justify-content-center d-flex align-items-center h-100">
+        <div class="row">
+            <ul class="navbar-nav text-center">
+                {% for link in header_links %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ link.url }}">
+                            {{ link.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+

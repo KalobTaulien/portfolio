@@ -1,0 +1,33 @@
+.richtext-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  max-width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 500px;
+
+    &.left {
+      float: left;
+      margin-right: 20px;
+      margin-left: -100px;
+      margin-bottom: 0;
+      width: initial;
+    }
+
+    &.right {
+      float: right;
+      margin-left: 20px;
+      margin-right: -100px;
+      margin-bottom: 0;
+    }
+
+    &.full-width {
+      max-width: calc(100% + 200px);
+      width: calc(100% + 200px);
+      position: relative;
+      left: -100px;
+    }
+  }
+
+}

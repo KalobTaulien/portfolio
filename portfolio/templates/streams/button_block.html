@@ -1,0 +1,9 @@
+<div class="container streamfield">
+   <div class="row">
+      <div class="col-md-6 offset-md-3">
+        {% for button in self.buttons %}
+            <a href="{{ button.url }}" class="btn btn-default btn-small">{{ button.link_text }}</a>
+        {% endfor %}
+      </div>
+   </div>
+</div>

@@ -1,0 +1,70 @@
+{% load menu_tags %}
+{% get_nav_items as header_links %}
+
+{% if page.footer_cta %}
+    {% include "includes/footer_cta.html" with cta=page.footer_cta %}
+{% endif %}
+
+<footer>
+    <div class="container text-center">
+        <div class="footer-nav">
+            <ul class="navbar-nav">
+                {% for link in header_links %}
+                    <li class="nav-item">
+                        <a class="nav-link{% if link.slug in request.path %} active {% endif %}" href="{{ link.url }}">
+                            {{ link.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% if settings.site_settings.SocialMediaSettings.social_media_header %}
+            <h4>
+                {{ settings.site_settings.SocialMediaSettings.social_media_header }}
+            </h4>
+        {% endif %}
+
+        <div class="py-3 py-md-4 footer-social-icons">
+            {% if settings.site_settings.SocialMediaSettings.github %}
+                <a class="footer-social-icon" href="{{ settings.site_settings.SocialMediaSettings.github }}">
+                    <svg>
+                        <use href="#github"></use>
+                    </svg>
+                </a>
+            {% endif %}
+            {% if settings.site_settings.SocialMediaSettings.snapchat %}
+                <a class="footer-social-icon" href="{{ settings.site_settings.SocialMediaSettings.snapchat }}">
+                    <svg>
+                        <use href="#snapchat"></use>
+                    </svg>
+                </a>
+            {% endif %}
+            {% if settings.site_settings.SocialMediaSettings.instagram %}
+                <a class="footer-social-icon" href="{{ settings.site_settings.SocialMediaSettings.instagram }}">
+                    <svg>
+                        <use href="#instagram"></use>
+                    </svg>
+                </a>
+            {% endif %}
+            {% if settings.site_settings.SocialMediaSettings.linkedin %}
+                <a class="footer-social-icon" href="{{ settings.site_settings.SocialMediaSettings.linkedin }}">
+                    <svg>
+                        <use href="#linkedin"></use>
+                    </svg>
+                </a>
+            {% endif %}
+            {% if settings.site_settings.SocialMediaSettings.facebook %}
+                <a class="footer-social-icon" href="{{ settings.site_settings.SocialMediaSettings.facebook }}">
+                    <svg>
+                        <use href="#facebook"></use>
+                    </svg>
+                </a>
+            {% endif %}
+        </div>
+
+        <div class="copyright small">
+            Copyright &copy; {% now "Y" %}
+        </div>
+    </div>
+</footer>

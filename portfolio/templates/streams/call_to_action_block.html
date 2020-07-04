@@ -1,0 +1,16 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<section class="cta-section scale-in-cta" data-scroll>
+    {% image self.image fill-1600x1200 as img %}
+    <div class="background scale-in-cta">
+        <img src="{{ img.url }}" alt="{{ img.alt }}">
+    </div>
+    <div class="content content--{{ self.text_alignment }}">
+        <div class="text">
+            {{ self.content|richtext }}
+            {% if self.link.url %}
+                <a href="{{ self.link.url }}" class="btn btn-primary">{{ self.link.link_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,87 @@
+h1 {
+  font-size: 48px;
+  @include media-breakpoint-up(md) {
+    font-size: 72px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 120px;
+  }
+}
+
+h2 {
+  font-size: 34px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 52px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 72px;
+  }
+}
+
+h3 {
+  font-size: 28px !important;
+    @include media-breakpoint-up(md) {
+    font-size: 34px !important;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 48px !important;
+  }
+}
+
+p {
+  font-size: 16px;
+   @include media-breakpoint-up(md) {
+     font-size: 18px;
+   }
+     @include media-breakpoint-up(md) {
+     font-size: 20px;
+   }
+}
+
+.rich-text a,
+.nav-link {
+  color: $brand-color-light;
+  transition: color;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: 2px;
+    background: #FFF;
+    height: 1px;
+    display: block;
+    transition: width 0.4s ease-in-out;
+    transform-origin: left;
+  }
+
+  &:hover {
+    color: $brand-color-light;
+
+    &:after {
+      width: 100%;
+    }
+  }
+
+}
+
+.nav-link {
+  color: #FFF !important;
+  &:hover {
+    &:after {
+      width: calc(100% - 16px) !important;
+    }
+  }
+}
+
+// Wrapping elements in <brand> will give them a color
+brand {
+  color: $brand-color;
+}
+
+brand-light {
+  color: $brand-color-light;
+}

@@ -1,0 +1,27 @@
+{% load wagtailimages_tags %}
+
+<div class="image-row-block">
+    <div class="imagerow imagerow--large">
+        <div class="imagerow-row">
+            {% for img in self.row %}
+                <div class="imagerow-image">
+                    {% image img.image fill-60x51 as image_p %}
+                    {% image img.image height-600 as image_s %}
+                    {% image img.image height-1000 as image_m %}
+                    {% image img.image height-1200 as image %}
+                    {% if img.link.url %}
+                        <a href="{{ img.link.url }}">
+                            <img src="{{ image_p.url }}"
+                                 srcset="{{ image_s.url }} 640w,{{ image_m.url }} 960w,{{ image.url }} 1200w"
+                                 alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                        </a>
+                    {% else %}
+                        <img src="{{ image_p.url }}"
+                             srcset="{{ image_s.url }} 640w,{{ image_m.url }} 960w,{{ image.url }} 1200w"
+                             alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

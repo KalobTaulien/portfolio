@@ -1,0 +1,31 @@
+//Reset the bootstrap variables using the values from the vars and font file.
+@import "../globals/variables";
+@import "../globals/fonts";
+
+
+//Color
+$primary: $brand-color;
+$dark: $black;
+$light: #FFF;
+
+//Link Settings
+$link-hover-decoration: none;
+
+//Fonts
+$font-family-base: $body-font;
+$headings-font-family: $heading-font;
+$headings-font-weight: 400;
+
+//Container Defaults
+$container-max-widths: (
+  sm: 540px,
+  md: 760px,
+  lg: 1000px,
+  xl: 1300px
+);
+
+//Grid
+$grid-gutter-width: 40px;
+
+//Forms
+$input-focus-border-color: $brand-color;
