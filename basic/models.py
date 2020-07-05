@@ -1,3 +1,5 @@
+from django.core.cache import cache
+from django.core.cache.utils import make_template_fragment_key
 from django.db import models
 
 from wagtail.core.models import Page
@@ -76,3 +78,12 @@ class BasicPage(Page):
     promote_panels = Page.promote_panels + [
         ImageChooserPanel("social_sharing_image"),
     ]
+
+    def save(self, *args, **kwargs):
+        key = make_template_fragment_key(
+            "page_cache",
+            [self.id],
+        )
+        cache.delete(key)
+
+        return super().save(*args, **kwargs)

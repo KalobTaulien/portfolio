@@ -1,5 +1,6 @@
-{% load static wagtailuserbar wagtailimages_tags %}
+{% load static wagtailuserbar wagtailimages_tags cache %}
 
+{% cache 2592000 page_cache page.id %}
 <!DOCTYPE html>
 <html lang="en" style="background: #171717;">
 <head>
@@ -79,7 +80,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-    {% comment %} <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> {% endcomment %}
     <script type="text/javascript" src="/static/js/app.min.js"></script>
 
     {% block extra_js %}
@@ -88,6 +88,6 @@
 
     {% include 'includes/icons.html' %}
 
-    {% wagtailuserbar %}
 </body>
 </html>
+{% endcache %}
