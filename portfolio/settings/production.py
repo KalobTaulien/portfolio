@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 SECRET_KEY = '+c*0b=u(=8i&(sbvaklk2aazwk)_mej7r5%-cs$uhbexv5*c4o'
-ALLOWED_HOSTS = ['kalob.io', '142.93.87.56']
+ALLOWED_HOSTS = ['kalob.io']
 
 cwd = os.getcwd()
 CACHES = {
@@ -22,6 +22,18 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://ebadb0c0953b481b87de51b13a5106bc@o416309.ingest.sentry.io/5310350",
+    integrations=[DjangoIntegration()],
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)
 
 try:
     from .local import *

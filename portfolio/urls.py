@@ -11,7 +11,6 @@ from wagtail.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
     url(r'^django-admin/', admin.site.urls),
-
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
 
