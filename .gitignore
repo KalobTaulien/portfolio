@@ -52,7 +52,7 @@ Desktop.ini
 env/
 
 # Static assets and uploads
-static/
+/static/
 media/
 
 # VS Code
