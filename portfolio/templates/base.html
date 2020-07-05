@@ -51,23 +51,8 @@
         <meta name="twitter:image:src" content="https://{{ request.site.hostname }}{{ social_share_img.url }}">
     {% endif %}
 
-
-    {% comment %}
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicons/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicons/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicons/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'img/favicons/site.webmanifest' %}">
-    <link rel="mask-icon" href="{% static 'img/favicons/safari-pinned-tab.svg' %}" color="#5bbad5">
-    <link rel="shortcut icon" href="{% static 'img/favicons/favicon.ico' %}">
-    <meta name="apple-mobile-web-app-title" content="kalob.io">
-    <meta name="application-name" content="kalob.io">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="{% static 'img/favicons/browserconfig.xml' %}">
-    <meta name="theme-color" content="#ffffff">
-    {% endcomment %}
-
     {# Global stylesheets #}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.min.css">
 
     {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}
@@ -95,7 +80,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
     {% comment %} <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> {% endcomment %}
-    <script type="text/javascript" src="{% static 'js/app.min.js' %}"></script>
+    <script type="text/javascript" src="/static/js/app.min.js"></script>
 
     {% block extra_js %}
         {# Override this in templates to add extra javascript #}
