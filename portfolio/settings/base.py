@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     'wagtail_tinypng',
 
+    'wagtail.contrib.modeladmin',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.contrib.settings',
@@ -45,7 +46,6 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
-
     'modelcluster',
     'setuptools',
     'taggit',
@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
