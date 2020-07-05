@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'streams',
     'site_settings',
 
+    'wagtail_tinypng',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.contrib.settings',
@@ -167,3 +169,5 @@ WAGTAIL_SITE_NAME = "Kalob Taulien's Portfolio"
 BASE_URL = 'https://kalob.io/'
 
 WAGTAILIMAGES_JPEG_QUALITY = 100
+
+TINIFY_API_KEY = "gcDrlLhmHVg6ZYHsRs8BgBY4MFXq4sCj"
