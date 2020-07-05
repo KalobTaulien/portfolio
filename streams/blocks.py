@@ -251,7 +251,9 @@ class TwoThirdsGalleryBlock(blocks.StructBlock):
         default='left',
     )
     two_thirds_image = ImageChooserBlock()
+    two_thirds_external_link = blocks.URLBlock(required=False)
     one_third_image = ImageChooserBlock()
+    one_third_external_link = blocks.URLBlock(required=False)
 
     class Meta:
         template = "streams/two_thirds_gallery_block.html"

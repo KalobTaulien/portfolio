@@ -5,11 +5,23 @@
         <div class="row">
             <div class="col-md-8 py-0 px-0 px-md-3">
                 {% image self.two_thirds_image fill-800x550 as img %}
-                <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                {% if self.two_thirds_external_link %}
+                    <a href="{{ self.two_thirds_external_link }}" rel="nofollow">
+                        <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                    </a>
+                {% else %}
+                    <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                {% endif %}
             </div>
             <div class="col-md-4 py-0 px-0 px-md-3 {% if self.large_image_alignment == 'right' %}order-first{% endif %}">
                 {% image self.one_third_image fill-375x550 as img %}
-                <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                {% if self.one_third_external_link %}
+                    <a href="{{ self.one_third_external_link }}" rel="nofollow">
+                        <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                    </a>
+                {% else %}
+                    <img src="{{ img.url }}" alt="{{ img.alt }}" style='width: 100%; height: auto;'>
+                {% endif %}
             </div>
         </div>
     </div>
