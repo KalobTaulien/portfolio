@@ -68,6 +68,11 @@ p {
 
 }
 
+.custom-richtext .rich-text h3 {
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
 .nav-link {
   color: #FFF !important;
   &:hover {
@@ -84,4 +89,12 @@ brand {
 
 brand-light {
   color: $brand-color-light;
+}
+
+
+@media(max-width: 767px) {
+  .container-responsive {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
