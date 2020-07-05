@@ -1,8 +1,8 @@
 from .base import *
 
 DEBUG = False
-SECRET_KEY = env('SECRET_KEY')
-ALLOWED_HOSTS = ['kalob.io']
+SECRET_KEY = '+c*0b=u(=8i&(sbvaklk2aazwk)_mej7r5%-cs$uhbexv5*c4o'
+ALLOWED_HOSTS = ['kalob.io', '142.93.87.56']
 
 cwd = os.getcwd()
 CACHES = {
@@ -15,9 +15,9 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
+        'NAME': 'portfolio',
+        'USER': 'portfolio',
+        'PASSWORD': '8##j56J#9jh3V2PGq#Wq',
         'HOST': 'localhost',
         'PORT': '',
     }
