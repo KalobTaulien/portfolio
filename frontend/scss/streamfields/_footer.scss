@@ -25,6 +25,8 @@ footer {
   .footer-nav {
     .navbar-nav {
       margin-bottom: 20px;
+      flex-direction: row;
+      justify-content: center;
 
       .nav-item {
         font-size: 10px;
@@ -38,9 +40,6 @@ footer {
         }
       }
 
-      flex-direction: row;
-      justify-content: center;
-
       .nav-item:not(:last-child) {
         padding-right: 10px;
       }
@@ -49,5 +48,11 @@ footer {
         font-size: 12px;
       }
     }
+  }
+}
+
+@media(max-width: 640px) {
+  footer .footer-nav .navbar-nav {
+    flex-direction: column;
   }
 }
