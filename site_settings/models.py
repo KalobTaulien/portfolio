@@ -13,9 +13,9 @@ class SocialMediaSettings(BaseSetting):
         blank=True,
         help_text='Enter your GitHub URL'
     )
-    snapchat = models.URLField(
+    twitter = models.URLField(
         blank=True,
-        help_text='Enter your Snapchat URL'
+        help_text='Enter your twitter URL'
     )
     instagram = models.URLField(
         blank=True,
@@ -33,7 +33,7 @@ class SocialMediaSettings(BaseSetting):
     panels = [
         FieldPanel("social_media_header"),
         FieldPanel("github"),
-        FieldPanel("snapchat"),
+        FieldPanel("twitter"),
         FieldPanel("instagram"),
         FieldPanel("linkedin"),
         FieldPanel("facebook"),
