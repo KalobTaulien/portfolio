@@ -385,3 +385,10 @@ class FooterCTABlock(blocks.StructBlock):
     class Meta:
         template = "includes/footer_cta.html"
         label = "Footer Call to Action"
+
+
+class ChildPages(blocks.StaticBlock):
+
+    class Meta:
+        template = "includes/child_pages.html"
+        label = "Child Pages"

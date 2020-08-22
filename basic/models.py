@@ -60,6 +60,7 @@ class BasicPage(Page):
         ("image_gallery", blocks.ImageGallery()),
         ("hr", blocks.HorizontalRuleBlock()),
         ("horizontal_gallery", blocks.HorizontalGallery()),
+        ("child_pages", blocks.ChildPages()),
     ], null=True, blank=True)
 
 

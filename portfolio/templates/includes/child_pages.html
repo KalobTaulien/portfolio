@@ -1,0 +1,21 @@
+{% load menu_tags wagtailimages_tags %}
+
+{% get_child_pages as child_pages %}
+<section class="large-section small-listing-block">
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for child in child_pages %}
+                {% image child.specific.banner_image fill-605x363 as img %}
+                <div class="col-md-6 mb-5">
+                    <a class="large-card small-card" href="{{ child.url }}">
+                        <img src="{{ img.url }}" alt="{{ img.alt }}">
+                        <div class="large-card__text">
+                            <h3>{{ child.title }}</h3>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
