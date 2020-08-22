@@ -60,7 +60,7 @@ class BasicPage(Page):
         ("image_gallery", blocks.ImageGallery()),
         ("hr", blocks.HorizontalRuleBlock()),
         ("horizontal_gallery", blocks.HorizontalGallery()),
-        ("child_pages", blocks.ChildPages()),
+        ("child_pages", blocks.HorizontalGallery()),
     ], null=True, blank=True)
 
 
@@ -79,6 +79,11 @@ class BasicPage(Page):
     promote_panels = Page.promote_panels + [
         ImageChooserPanel("social_sharing_image"),
     ]
+
+    def get_template(self, request, *args, **kwargs):
+        if request.is_preview:
+            self.template = "basic/basic_page_preview.html"
+        return self.template
 
     def save(self, *args, **kwargs):
         key = make_template_fragment_key(
