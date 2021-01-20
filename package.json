@@ -12,7 +12,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "build": "^0.1.4",
-    "gsap": "^3.2.6",
+    "gsap": "^3.6.0",
     "jquery": "^3.5.0",
     "npm": "^6.13.7",
     "popper.js": "^1.16.0",
