@@ -1,4 +1,4 @@
-Django==3.0.8
+Django==3.0.14
 wagtail==2.9.2
 wagtailtinypng==0.0.3
 django-extensions==3.0.2
