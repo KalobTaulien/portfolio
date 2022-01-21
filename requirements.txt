@@ -2,4 +2,4 @@ Django==3.0.8
 wagtail==2.9.2
 wagtailtinypng==0.0.3
 django-extensions==3.0.2
-ipython==7.16.1
+ipython==7.16.3
